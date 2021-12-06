@@ -1,3 +1,4 @@
-# Javascript practico
+# Javascript práctico
 
-Taller practico de Javascript
+Taller práctico de Javascript
+    --Figuras geométrica 
