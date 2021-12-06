@@ -1,1 +1,3 @@
-# Javascript-practico
+# Javascript practico
+
+Taller practico de Javascript
