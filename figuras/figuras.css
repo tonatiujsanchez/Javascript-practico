@@ -1,0 +1,13 @@
+header{
+    text-align: center;
+}
+.figuras-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.figuras-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    justify-content: center;
+    gap: 24px;
+}
