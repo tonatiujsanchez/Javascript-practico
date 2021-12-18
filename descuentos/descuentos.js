@@ -26,9 +26,18 @@ function obtenerValorDelCupon(){
 
     if( cupon.length > 0 ){
         console.log( cupon[0] );
+        const inputPrecio = document.getElementById('precioTotal');
+        const precio = Number(inputPrecio.value);
+
+        const cuponName = cupon[0].titulo;
+        const precioCupon = precioConDescuanto( precio, cupon[0].porcentaje );
+        console.log( { cuponName, precioCupon } );
+        agregarAlHTML( precio, 0, { cuponName, precioCupon } );
+
 
     }else{
         console.log('Cupón NO VALIDO');
+        alert('Cupón NO VALIDO');
     }
 
 }
@@ -68,10 +77,21 @@ function obtenerPrecioConDescuento(){
 }
 
 
-function agregarAlHTML( precio, resultado ){
+function agregarAlHTML( precio, resultado, resultadoCupon ){
     const parrafoResultado = document.getElementById('resultadoPrecioConDescuento');
     const parrafoPrecioRegular = document.getElementById('precioRegular');
+    const parrafoResultadoCupon = document.getElementById('resultadoCupon');
+
+    // parrafoPrecioRegular.innerText = `Precio regular: $${precio}`;
     
-    parrafoResultado.innerHTML = `<span>El precio con descuento es: $${resultado}</span>`;
-    parrafoPrecioRegular.innerText = `Precio regular: $${precio}`;
+    console.log(resultadoCupon);
+
+    if( resultadoCupon ){
+        parrafoResultado.innerHTML = ``;
+        parrafoResultadoCupon.innerHTML = `<p>¡Cupón ${ resultadoCupon.cuponName } Aplicado !</p><p>El precio con descuento es: $${ resultadoCupon.precioCupon }</p>`;
+    }else{
+        parrafoResultado.innerHTML = `<span>El precio con descuento es: $${resultado}</span>`;
+        parrafoResultadoCupon.innerHTML = ``;
+    }
+    
 }
