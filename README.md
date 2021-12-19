@@ -25,3 +25,10 @@ Taller práctico de Javascript
 - Refactorizar el código con funciones
 - Implemetar una irterfaz para el usuario
 
+## Taller #4: Promedio Ponderado
+
+- Definir las fórmulas
+- Codificar las fórmulas en javascript
+- Refactorizar el código con funciones
+- Implemetar una irterfaz para el usuario
+
